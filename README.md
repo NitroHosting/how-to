@@ -17,19 +17,25 @@ Please open an issue if you feel like any command is missing or should be includ
 You are assumed to have `Git` and `OpenSSH` installed. If you do not have one, please stop reading and install them immediately.
 
 > **Debian/Ubuntu:** sudo apt install git openssh-client
+> 
 > **Old CentOS/RHEL:** sudo yum install git openssh-client
+> 
 > **New CentOS/RHEL:** sudo dnf install git openssh-client
+> 
 >  **Arch Based Linux:** sudo pacman -S git openssh
+> 
 >   **MacOS:** sudo brew install git openssh-client
 
 For windows, please follow the instructions in the links below:
 
 > Git: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+> 
 > OpenSSH: [https://pureinfotech.com/install-openssh-client-windows-10/](https://pureinfotech.com/install-openssh-client-windows-10/)
 
 Now that you have installed `Git` and `OpenSSH`, check if they are working, type in the commands below:
 
 > git --version
+> 
 > ssh -V
 
 If they responded nothing or returned command not found, it means you did it incorrectly. This is a very basic installation process requiring zero skill level, we will not provide further assist on debugging your installation if they failed. Please search for solution on the internet according to your situation. Or just search for installation document on their official website.
@@ -72,6 +78,7 @@ Now you have the SSH link copied, head over to the folder you want to work on *(
 If you did not clone the repository via `git clone`, then you must add a remote for git. Do `git remote add <name> <url>`, we suggest naming it `origin` (We will use `origin` as the remote name in this guide). As always, url is the SSH link to the repository. If you are unsure, you can always use `git remote` to view the list of name of the remotes. And `git remote -v` to view the name and url of the remotes *(-v stands for Verbose if you would like to know)*.
 
 > **To remove a remote, simply use** `git remove <name>`.
+> 
 > **To rename a remote, use** `git rename <old_name> <new_name>`.
 
 # Everytime you start working
@@ -81,6 +88,7 @@ If you did not clone the repository via `git clone`, then you must add a remote 
 We generally use the `master` branch for verified changes. Anyone that has actual experience on working with a large team should know that they shall never directly commit/push to the master branch. We usually create another branch when working on a feature, then we use that submit a pull request on our newly created and finished branch for admins to review and add your code to `master`.
 
 > **To create a branch, you can use** `git branch <branch_name>`.
+> 
 > **To switch to a branch, use** `git checkout <branch_name>`.
 
 If you feel like it is so annoying to run two commands just to create and switch branch, you can do `git checkout -b <branch_name>`. This would basically create a branch and switch you to the new branch. 
@@ -94,7 +102,9 @@ Everytime you are going to work on something, you wouldn't want to mess up the r
 So first, you want to pull all changes made on remote to your local machine, so you won't have any conflict when pushing your code to it. Normally, you would only need to run `git fetch`, but you can also use the commands below:
 
 > **Fetch from a remote (all branches):** `git fetch <remote>`.
+> 
 > **Fetch from a branch:** `git fetch <remote> <branch>`.
+> 
 > **Fetch from all remotes (POWER MOVE):** `git fetch --all`.
 
 `git fetch` will **ONLY** fetch the latest meta-data from the remote, it **WILL NOT** update any of your file. It is very harmless and it is for us to see if there is any changes made since our last commit/push. But that is not enough, isn't it?
@@ -128,6 +138,7 @@ To change your current working branch, run:
 To create a branch then change your current branch to that (By default it base your new branch off your current `HEAD`, you can specify which branch it base off of with an additional argument):
 
 > `git checkout -b <new_branch>`
+> 
 > `git checkout -b <new_branch> <old_branch>`
 
 ### What is HEAD? And why I see "detached HEAD"
@@ -146,8 +157,11 @@ After hours and hours of coding...
 Simply because in most version control system, saving a file isn't just as simple as hitting the save button or ctrl+s. You have to stage (add) the file to Git. The following commands might seem similar, but they are actually very different:
 
 > **Stage one file/folder only:** `git add <path>`
+> 
 > **Stage all changes:** `git add -A`
+> 
 > **Stage all changes except file deletions:** `git add .`
+> 
 > **Stage all changes except new files:** `git add -u`
 
 Most modern and professional IDEs like JetBrains will have a feature called `File Watcher` which will watch for any file changes. They usually implement a full Git solution where you don't have to stage changes, they will stage it for you whenever you create/delete/modify a file.
@@ -199,8 +213,10 @@ In theory, local and remote branches in Git are completely separate items. Thing
 
 ### cat
 > **Windows:** type
+> 
 > **MacOS:** *Same with Linux*
 
 ### vim / nano
 > **Windows:** edit / notepad
+> 
 > **Mac:** *Same with Linux*
