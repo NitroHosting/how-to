@@ -182,6 +182,13 @@ Pushing the code to a branch doesn't mean it can't be changed anymore. You can c
 
 Pull request is basically you requesting the admin/manager to pull/merge your code to `master` in most situations. After finishing a part of the code, maybe a feature, you can push the code and submit a pull request on the GitHub repository page. You can find the section on the repository navigation bar, go in and click `New Pull Request` on the top right corner (Big green button, hard to miss). You can choose the `base` and the `compare` branches. For example, if I choose `**base:** master` and `**compare:** feature-17`, it means to pull changes in branch `feature-17` to `master`, aka adding "Feature 17" to `master`.
 
+# Short sum up on how you should work
+
+ 1. Fetch/Pull the repository.
+ 2. Edit files.
+ 3. Commit to local repository *(`git commit` won't commit to remote except when it is pushed)*.
+ 4. Fetch/Pull it again (If there are any conflict you will be notified), in that case you can solve it by merging.
+
 # Extra tips
 
 ### Setting an upstream branch
